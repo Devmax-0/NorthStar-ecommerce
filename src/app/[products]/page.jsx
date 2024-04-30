@@ -1,3 +1,5 @@
+"use client";
+
 import { CardInfo, TopSellingInfo } from "@/Components/Constants";
 
 const page = (params) => {
