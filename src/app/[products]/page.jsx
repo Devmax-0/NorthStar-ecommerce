@@ -1,15 +1,12 @@
-"use client";
-
 import { CardInfo, TopSellingInfo } from "@/Components/Constants";
 
 const page = (params) => {
-  console.log(params.params.products);
   return (
     <div>
       <h1>
         {CardInfo.map((info, index) =>
           info.id === params.params.products ? (
-            <section class="overflow-hidden">
+            <section key={index} class="overflow-hidden">
               <div class="mx-auto max-w-5xl px-5 py-24">
                 <div class="mx-auto flex items-center lg:w-4/5 md:flex-col">
                   <img
@@ -126,7 +123,7 @@ const page = (params) => {
 
         {TopSellingInfo.map((info, index) =>
           info.id === params.params.products ? (
-            <section class="overflow-hidden">
+            <section key={index} class="overflow-hidden">
               <div class="mx-auto max-w-5xl px-5 py-24">
                 <div class="mx-auto flex items-center lg:w-4/5 md:flex-col">
                   <img
