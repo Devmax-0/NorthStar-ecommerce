@@ -1,40 +1,48 @@
 export const CardInfo = [
   {
+    id: "1",
     imgUrl: "/Images/shirt1.png",
     title: "Plain White Shirt",
     price: "$29.00",
   },
   {
+    id: "2",
     imgUrl: "/Images/shirt2.png",
     title: "Denim Jacket",
     price: "$69.00",
   },
   {
+    id: "3",
     imgUrl: "/Images/shirt3.png",
     title: "Black Polo Shirt",
     price: "$49.00",
   },
   {
+    id: "4",
     imgUrl: "/Images/shirt4.png",
     title: "Blue Sweatshirt",
     price: "$79.00",
   },
   {
+    id: "5",
     imgUrl: "/Images/shirt5.png",
     title: "Blue Plain Shirt",
     price: "$49.00",
   },
   {
+    id: "6",
     imgUrl: "/Images/shirt6.png",
     title: "Dark Blue Shirt",
     price: "$89.00",
   },
   {
+    id: "7",
     imgUrl: "/Images/shirt7.png",
     title: "Outcast T Shirt",
     price: "$19.00",
   },
   {
+    id: "8",
     imgUrl: "/Images/shirt8.png",
     title: "Polo Plain Shirt",
     price: "$29.00",
@@ -67,21 +75,25 @@ export const supportInfo = [
 
 export const TopSellingInfo = [
   {
+    id: "9",
     imgUrl: "/Images/selling1.png",
     title: "Gray Polo Shirt",
     price: "$49.00",
   },
   {
+    id: "10",
     imgUrl: "/Images/selling2.png",
     title: "Red Shirt",
     price: "$69.00",
   },
   {
+    id: "11",
     imgUrl: "/Images/selling3.png",
     title: "Polo White Shirt",
     price: "$49.00",
   },
   {
+    id: "12",
     imgUrl: "/Images/selling4.png",
     title: "Pink Casual Shirt",
     price: "$39.00",

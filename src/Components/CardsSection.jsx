@@ -1,4 +1,5 @@
 // import { CardInfo } from "./Constants";
+import Link from "next/link";
 import { CardInfo } from "./Constants";
 import Image from "next/image";
 const CardsSection = () => {
@@ -16,25 +17,27 @@ const CardsSection = () => {
           </div>
           <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             {CardInfo.map((card, index) => (
-              <div key={index} className="bg-white 0  overflow-hidden">
-                <Image
-                  alt="Product 1"
-                  className="w-full h-72 object-cover"
-                  width={300}
-                  height={600}
-                  src={card.imgUrl}
-                  style={{
-                    aspectRatio: "400/300",
-                    objectFit: "contain",
-                  }}
-                />
-                <div className="p-4 flex flex-col items-center">
-                  <h3 className="text-lg md:text-lg font-semibold mb-1">
-                    {card.title}
-                  </h3>
-                  <p className="text-[#024E82] text-base">{card.price}</p>
+              <Link href={`${card.id}`} key={index}>
+                <div className="bg-white 0  overflow-hidden">
+                  <Image
+                    alt="Product 1"
+                    className="w-full h-72 object-cover"
+                    width={300}
+                    height={600}
+                    src={card.imgUrl}
+                    style={{
+                      aspectRatio: "400/300",
+                      objectFit: "contain",
+                    }}
+                  />
+                  <div className="p-4 flex flex-col items-center">
+                    <h3 className="text-lg md:text-lg font-semibold mb-1">
+                      {card.title}
+                    </h3>
+                    <p className="text-[#024E82] text-base">{card.price}</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

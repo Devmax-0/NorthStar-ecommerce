@@ -40,9 +40,15 @@ const Header = () => {
             </ul>
           </div>
           <div class="flex gap-5">
-            <box-icon name="user"></box-icon>
-            <box-icon name="shopping-bag"></box-icon>
-            <box-icon name="menu"></box-icon>
+            <Link href={"#"}>
+              <box-icon name="user"></box-icon>
+            </Link>
+            <Link href={"/cart"}>
+              <box-icon name="shopping-bag"></box-icon>
+            </Link>
+            <Link href={"#"}>
+              <box-icon name="menu"></box-icon>
+            </Link>
           </div>
         </div>
       </div>
