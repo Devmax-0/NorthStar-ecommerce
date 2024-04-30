@@ -14,6 +14,7 @@ const page = (params) => {
                   <img
                     class="h-[400px] w-full rounded object-contain lg:h-96 lg:w-1/2"
                     src={info.imgUrl}
+                    alt="product"
                   />
                   <div class="mt-6 w-full lg:mt-0 lg:w-1/2 lg:pl-10">
                     <h2 class="text-sm font-semibold tracking-widest text-gray-500">

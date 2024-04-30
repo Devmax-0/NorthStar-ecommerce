@@ -1,7 +1,9 @@
 "use client";
 
-import "boxicons";
 import Link from "next/link";
+import { FiUser } from "react-icons/fi";
+import { IoBagHandleOutline } from "react-icons/io5";
+import { FiMenu } from "react-icons/fi";
 
 const Header = () => {
   return (
@@ -41,13 +43,13 @@ const Header = () => {
           </div>
           <div class="flex gap-5">
             <Link href={"#"}>
-              <box-icon name="user"></box-icon>
+              <FiUser />
             </Link>
             <Link href={"/cart"}>
-              <box-icon name="shopping-bag"></box-icon>
+              <IoBagHandleOutline />
             </Link>
             <Link href={"#"}>
-              <box-icon name="menu"></box-icon>
+              <FiMenu />
             </Link>
           </div>
         </div>
