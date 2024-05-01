@@ -4,8 +4,12 @@ import Link from "next/link";
 import { FiUser } from "react-icons/fi";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
+import Badge from "@mui/material/Badge";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const items = useSelector((state) => state.cart);
+
   return (
     <div className="z-10">
       <div class="relative w-full bg-white p-4">
@@ -41,15 +45,17 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div class="flex gap-5">
+          <div class="flex gap-5 justify-center items-center">
             <Link href={"#"}>
-              <FiUser />
+              <FiUser className="text-xl" />
             </Link>
             <Link href={"/cart"}>
-              <IoBagHandleOutline />
+              <Badge badgeContent={items.products.length} color="primary">
+                <IoBagHandleOutline className="text-xl" />
+              </Badge>
             </Link>
             <Link href={"#"}>
-              <FiMenu />
+              <FiMenu className="text-xl" />
             </Link>
           </div>
         </div>

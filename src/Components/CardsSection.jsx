@@ -34,7 +34,7 @@ const CardsSection = () => {
                     <h3 className="text-lg md:text-lg font-semibold mb-1">
                       {card.title}
                     </h3>
-                    <p className="text-[#024E82] text-base">{card.price}</p>
+                    <p className="text-[#024E82] text-base">${card.price}.00</p>
                   </div>
                 </div>
               </Link>

@@ -1,8 +1,11 @@
 "use client";
 
 import { CardInfo, TopSellingInfo } from "@/Components/Constants";
+import { addProduct } from "@/redux/features/cartSlice";
+import { useDispatch } from "react-redux";
 
-const page = (params) => {
+const Page = (params) => {
+  const dispatch = useDispatch();
   return (
     <div>
       <h1>
@@ -108,11 +111,21 @@ const page = (params) => {
                     <div class="mb-5 mt-6 flex items-center border-b-2 border-gray-100 pb-5"></div>
                     <div class="flex items-center justify-between">
                       <span class="title-font text-xl font-bold text-gray-900">
-                        {info.price}
+                        ${info.price}.00
                       </span>
                       <button
                         type="button"
                         class="px-8 py-4 bg-[#024E82] text-white text-center"
+                        onClick={() =>
+                          dispatch(
+                            addProduct({
+                              id: info.id,
+                              name: info.title,
+                              price: info.price,
+                              quantity: 1,
+                            })
+                          )
+                        }
                       >
                         Add to Cart
                       </button>
@@ -245,4 +258,4 @@ const page = (params) => {
   );
 };
 
-export default page;
+export default Page;
